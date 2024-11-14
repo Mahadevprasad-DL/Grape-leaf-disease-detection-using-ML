@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        /* General Body Styling */
+        body {
+            background-image: url('../static/images.jpg'); /* Replace with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: rgba(46, 125, 50, 0.9); /* Semi-transparent green background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #e0e0e0;
+            margin-top: 10px;
+        }
+
+        /* Description Box Styling */
+        .description-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* Disease Description Styling */
+        .description, .fertilizer {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Button Styling */
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Disease Name and "Disease Area" Title -->
+    <header>
+        <h1>{{ disease_name }}</h1>
+        <p>Disease Area</p>
+    </header>
+
+    <!-- Description Box with Disease Details and Fertilizer Suggestion -->
+    <div class="description-box">
+        <p class="description">{{ disease_description }}</p>
+        <p class="fertilizer"><strong>Recommended Fertilizer:</strong> {{ disease_fertilizer }}</p>
+    </div>
+
+    <!-- Back to Home Button -->
+    <form action="/" method="get">
+        <button class="back-button" type="submit">Back to Home</button>
+    </form>
+</body>
+</html>
